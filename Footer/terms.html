@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пользовательское соглашение | Энциклопедия игр</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #c0392b;
+            margin-top: 25px;
+        }
+        .highlight {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #e74c3c;
+        }
+        .last-updated {
+            font-style: italic;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <h1>Пользовательское соглашение</h1>
+    <p class="last-updated">Действует с 10 июня 2024 г.</p>
+
+    <div class="highlight">
+        <p>Используя сайт "Энциклопедия игр", вы соглашаетесь с условиями этого документа.</p>
+    </div>
+
+    <h2>1. Условия использования</h2>
+    <p>Все материалы сайта предназначены исключительно для ознакомления. Запрещено:</p>
+    <ul>
+        <li>Копировать контент без указания ссылки на источник;</li>
+        <li>Использовать автоматические скрипты для сбора данных.</li>
+    </ul>
+
+    <h2>2. Ответственность</h2>
+    <p>Мы не гарантируем 100% точность информации об играх. Проверяйте данные на официальных сайтах разработчиков.</p>
+
+    <h2>3. Авторские права</h2>
+    <p>Логотипы игр и скриншоты принадлежат их правообладателям. Используются в соответствии с принципом <strong>fair use</strong>.</p>
+
+    <h2>4. Изменения условий</h2>
+    <p>Администрация вправе обновлять соглашение без предварительного уведомления.</p>
+
+    <h2>5. Контакты</h2>
+    <p>Вопросы? Пишите на <a href="bikc7018@gmail.com">bikc7018@gmail.com</a>.</p>
+    <!-- Кнопка "Назад" -->
+<button id="backBtn" class="back-button" title="Вернуться назад">
+    <svg class="back-icon" viewBox="0 0 24 24" width="24" height="24">
+      <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+    </svg>
+  </button>
+  
+  <style>
+    /* Стили кнопки */
+    .back-button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      opacity: 0.9;
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+  
+    .back-button:hover {
+      opacity: 1;
+      transform: translateY(-3px);
+      background: #3498db;
+    }
+  
+    .back-icon {
+      fill: currentColor;
+      transition: transform 0.3s ease;
+    }
+  
+    .back-button:hover .back-icon {
+      transform: translateX(-3px);
+    }
+  </style>
+  
+  <script>
+    // Анимация и логика кнопки
+    document.getElementById('backBtn').addEventListener('click', function() {
+      // Добавляем анимацию перед переходом
+      this.style.transform = 'scale(0.9)';
+      setTimeout(() => {
+        window.history.back();
+      }, 200);
+    });
+  </script>
+</body>
+</html>
