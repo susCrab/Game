@@ -922,8 +922,8 @@
                                     
                                     <p class="no-region" data-v-fdb9cbfc></p><!--]--><!--]--></div></div></div></div></div></div>
                                     <div class="header__nav" data-v-8e82c2ef>
-                                            <a href="index.html" class="favourites__bottom__item" data-v-8e82c2ef>
-                                                <p class="favourites__bottom__item__text" data-v-8e82c2ef>Главная</p></a><!--]--></div></div><!--]--></div></div></div></div>
+                                            
+                                                <p class="favourites__bottom__item__text" data-v-8e82c2ef>Назад</p></a><!--]--></div></div><!--]--></div></div></div></div>
 
     <main>
         <section class="content">
@@ -962,5 +962,15 @@
     <footer>
         <p>&copy; 2025 Жанр Экшен. Все права защищены.</p>
     </footer>
+      <script>
+document.querySelector('.favourites__bottom__item__text').addEventListener('click', function() {
+    if (window.history.length > 1) {
+        window.history.back();
+    } else {
+        
+        window.location.href = "https://suscrab.github.io/Game/index.html"; 
+    }
+});
+</script>
 </body>
 </html>
