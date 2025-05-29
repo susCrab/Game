@@ -606,12 +606,8 @@ document.getElementById('back-arrow').onclick = function() {
   <div id="imageCaption"></div>
 </div>
     <script>
-// Ждём загрузки DOM
 document.addEventListener('DOMContentLoaded', function() {
-  // Настройки (измените под свои ID!)
-  const imageIds = ['image-1', 'image-2' , 'image-3' , 'image-4' , 'image-5']; // Добавьте сюда все ID ваших изображений
-  
-  // Элементы модального окна
+  const imageIds = ['image-1', 'image-2' , 'image-3' , 'image-4' , 'image-5']; // Ваши ID изображений
   const modal = document.getElementById('imageModal');
   const zoomedImg = document.getElementById('zoomedImage');
   const caption = document.getElementById('imageCaption');
@@ -619,33 +615,54 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Функция открытия модального окна
   const openModal = (img) => {
-    if (!modal || !zoomedImg) return;
     modal.style.display = "block";
     zoomedImg.src = img.src;
     caption.textContent = img.alt || '';
     document.body.style.overflow = "hidden";
+    
+    // Блокируем всплытие события
+    img.style.pointerEvents = 'none';
+    setTimeout(() => { img.style.pointerEvents = 'auto' }, 300);
   };
 
-  // Функция закрытия
-  const closeModal = () => {
-    if (!modal) return;
+  // Функция закрытия с предотвращением всплытия
+  const closeModal = (e) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
     modal.style.display = "none";
     document.body.style.overflow = "auto";
   };
 
-  // Назначаем обработчики для всех указанных ID
+  // Назначение обработчиков
   imageIds.forEach(id => {
     const img = document.getElementById(id);
-    if (img) img.addEventListener('click', () => openModal(img));
+    if (img) {
+      img.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal(img);
+      });
+    }
   });
 
-  // Закрытие по кнопке и клику вне изображения
-  if (closeBtn) closeBtn.addEventListener('click', closeModal);
-  if (modal) modal.addEventListener('click', (e) => e.target === modal && closeModal());
+  // Закрытие по крестику
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+  }
+
+  // Закрытие по клику вне изображения
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal(e);
+    }
+  });
 
   // Закрытие по Esc
   document.addEventListener('keydown', (e) => {
-    if (e.key === "Escape" && modal?.style.display === "block") closeModal();
+    if (e.key === "Escape" && modal.style.display === "block") {
+      closeModal(e);
+    }
   });
 });
 </script>
