@@ -132,6 +132,69 @@
     <style>html[data-v-db69084f]{scroll-behavior:smooth}.skeleton-wrap[data-v-db69084f]{display:contents;height:15px;width:100%}.skeleton-wrap--active[data-v-db69084f]{display:flex}.skeleton-shine[data-v-db69084f]{animation:shine-db69084f 1.5s linear infinite;background:#ffffff1a;background:linear-gradient(110deg,#ededed66 8%,#f5f5f51a 18%,#ededed66 33%);background-size:200% 100%;border-radius:10px;height:100%;width:100%}@keyframes shine-db69084f{to{background-position-x:-200%}}</style>
     <style>.black-gold-coin path[data-v-4a65b2f0]{fill:#000}.grey-gold-coin path[data-v-4a65b2f0]{fill:#ffffffbf}</style>
     <style>html[data-v-c30716d1]{scroll-behavior:smooth}.news-card[data-v-c30716d1]{background:#ffffff0d;border-radius:16px;color:#fff;cursor:pointer;display:flex;flex-direction:column;height:362px;justify-content:space-between;padding:16px}.news-card__avatar[data-v-c30716d1]{border-radius:50%;height:40px;width:40px}.news-card__author[data-v-c30716d1]{display:flex;font-weight:500;gap:8px}.news-card__author-info[data-v-c30716d1]{display:flex;flex-direction:column;gap:4px}.news-card__author-name[data-v-c30716d1]{font-size:14px;line-height:16px}.news-card__author-name[data-v-c30716d1],.news-card__author-tag[data-v-c30716d1]{display:-webkit-box;line-clamp:1;-webkit-line-clamp:1;-webkit-box-orient:vertical}.news-card__author-date[data-v-c30716d1],.news-card__author-tag[data-v-c30716d1]{font-size:12px;line-height:12px;opacity:.5}.news-card__title[data-v-c30716d1]{display:-webkit-box;font-size:20px;font-weight:700;line-height:25px;margin-top:12px;line-clamp:3;-webkit-line-clamp:3;-webkit-box-orient:vertical}.news-card__img[data-v-c30716d1]{border-radius:16px;max-height:182px;-o-object-fit:cover;object-fit:cover;width:100%}</style>
+    <style>
+        /* Стили для модального окна */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  animation: fadeIn 0.3s;
+}
+
+#zoomedImage {
+  display: block;
+  max-width: 80%;
+  max-height: 80vh;
+  margin: 5% auto;
+  animation: zoomIn 0.3s;
+}
+
+.close-btn {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  color: #bbb;
+}
+
+#imageCaption {
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 18px;
+}
+
+.clickable-img {
+  cursor: zoom-in;
+  transition: transform 0.2s;
+}
+
+.clickable-img:hover {
+  transform: scale(1.03);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.5); }
+  to { transform: scale(1); }
+}
+    </style>
     <link rel="stylesheet" href="/_nuxt/entry.BD_mIdIV.css">
     <link rel="stylesheet" href="/_nuxt/swiper-vue.rVYbV_SS.css">
     <link rel="stylesheet" href="/_nuxt/TheFooter.BDcbGgcA.css">
@@ -421,23 +484,23 @@ document.getElementById('back-arrow').onclick = function() {
                                         <div class="swiper-wrapper"><!--[--><!--]--><!--[-->
                                           <div class="swiper-slide" data-v-c286209e><!--[-->
                                             <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="5a5363be5c43e440e28f915b-|49"></script>
-                                            <img onerror="this.setAttribute(&#39;data-error&#39;, 1)" alt="SILENT HILL 2." data-nuxt-img class="backdrop-blur-lg  bg-[#FFFFFF1A] video" src="Изображения\SoliumInf\Solium1.webp" data-v-c286209e><!--]--><!----></div>
+                                            <img onerror="this.setAttribute(&#39;data-error&#39;, 1)" alt="SILENT HILL 2." data-nuxt-img class="backdrop-blur-lg  bg-[#FFFFFF1A] video" id="image-1" src="Изображения\SoliumInf\Solium1.webp" data-v-c286209e><!--]--><!----></div>
 
                   <div class="swiper-slide" data-v-c286209e><!--[-->
                     <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="5a5363be5c43e440e28f915b-|49"></script>
-                    <img onerror="this.setAttribute(&#39;data-error&#39;, 1)" alt="SILENT HILL 2." data-nuxt-img class="backdrop-blur-lg  bg-[#FFFFFF1A] video" src="Изображения\SoliumInf\Solium2.webp" data-v-c286209e><!--]--><!----></div>
+                    <img onerror="this.setAttribute(&#39;data-error&#39;, 1)" alt="SILENT HILL 2." data-nuxt-img class="backdrop-blur-lg  bg-[#FFFFFF1A] video" id="image-2" src="Изображения\SoliumInf\Solium2.webp" data-v-c286209e><!--]--><!----></div>
 
                     <div class="swiper-slide" data-v-c286209e><!--[-->
                       <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="5a5363be5c43e440e28f915b-|49"></script>
-                      <img onerror="this.setAttribute(&#39;data-error&#39;, 1)" alt="SILENT HILL 2." data-nuxt-img class="backdrop-blur-lg  bg-[#FFFFFF1A] video" src="Изображения\SoliumInf\Solium3.webp" data-v-c286209e><!--]--><!----></div>
+                      <img onerror="this.setAttribute(&#39;data-error&#39;, 1)" alt="SILENT HILL 2." data-nuxt-img class="backdrop-blur-lg  bg-[#FFFFFF1A] video" id="image-3" src="Изображения\SoliumInf\Solium3.webp" data-v-c286209e><!--]--><!----></div>
 
                       <div class="swiper-slide" data-v-c286209e><!--[-->                  
                         <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="5a5363be5c43e440e28f915b-|49"></script>
-                        <img onerror="this.setAttribute(&#39;data-error&#39;, 1)" alt="SILENT HILL 2." data-nuxt-img class="backdrop-blur-lg  bg-[#FFFFFF1A] video" src="Изображения\SoliumInf\Solium4.webp" data-v-c286209e><!--]--><!----></div>
+                        <img onerror="this.setAttribute(&#39;data-error&#39;, 1)" alt="SILENT HILL 2." data-nuxt-img class="backdrop-blur-lg  bg-[#FFFFFF1A] video" id="image-4" src="Изображения\SoliumInf\Solium4.webp" data-v-c286209e><!--]--><!----></div>
 
                         <div class="swiper-slide" data-v-c286209e><!--[-->
                           <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="5a5363be5c43e440e28f915b-|49"></script>
-                          <img onerror="this.setAttribute(&#39;data-error&#39;, 1)" alt="SILENT HILL 2." data-nuxt-img class="backdrop-blur-lg  bg-[#FFFFFF1A] video" src="Изображения\SoliumInf\Solium5.webp" data-v-c286209e><!--]--><!----></div>
+                          <img onerror="this.setAttribute(&#39;data-error&#39;, 1)" alt="SILENT HILL 2." data-nuxt-img class="backdrop-blur-lg  bg-[#FFFFFF1A] video" id="image-5" src="Изображения\SoliumInf\Solium5.webp" data-v-c286209e><!--]--><!----></div>
 
                           
                                     <!--]--><!--[--><!--]--></div><!----><!----><!----><!--[--><!--]--></div>
@@ -537,5 +600,71 @@ document.getElementById('back-arrow').onclick = function() {
 </defs>
 </svg>
 </span> 
+ <div id="imageModal" class="modal">
+  <span class="close-btn">&times;</span>
+  <img id="zoomedImage" class="modal-content">
+  <div id="imageCaption"></div>
+</div>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const imageIds = ['image-1', 'image-2' , 'image-3' , 'image-4' , 'image-5']; // Ваши ID изображений
+  const modal = document.getElementById('imageModal');
+  const zoomedImg = document.getElementById('zoomedImage');
+  const caption = document.getElementById('imageCaption');
+  const closeBtn = document.querySelector('.close-btn');
 
-</body></html>
+  // Функция открытия модального окна
+  const openModal = (img) => {
+    modal.style.display = "block";
+    zoomedImg.src = img.src;
+    caption.textContent = img.alt || '';
+    document.body.style.overflow = "hidden";
+    
+    // Блокируем всплытие события
+    img.style.pointerEvents = 'none';
+    setTimeout(() => { img.style.pointerEvents = 'auto' }, 300);
+  };
+
+  // Функция закрытия с предотвращением всплытия
+  const closeModal = (e) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+  };
+
+  // Назначение обработчиков
+  imageIds.forEach(id => {
+    const img = document.getElementById(id);
+    if (img) {
+      img.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal(img);
+      });
+    }
+  });
+
+  // Закрытие по крестику
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+  }
+
+  // Закрытие по клику вне изображения
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal(e);
+    }
+  });
+
+  // Закрытие по Esc
+  document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape" && modal.style.display === "block") {
+      closeModal(e);
+    }
+  });
+});
+</script>
+</body>
+</html>
