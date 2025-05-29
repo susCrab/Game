@@ -307,8 +307,12 @@
 <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="5a5363be5c43e440e28f915b-|49">
 </script>
 <script>
-  document.querySelector('.Back arrow').onclick = function() {
-    window.history.back();
+  document.getElementById('Back arrow').onclick = function() {
+    if (window.history.length > 1) {
+      window.history.back();
+    } else {
+      window.location.href = "https://suscrab.github.io/Game/index.html"; // Перенаправляем на главную
+    }
   };
 </script>
 <img onerror="this.setAttribute(&#39;data-error&#39;, 1)" alt="screenshot" loading="lazy" data-nuxt-img srcset="/_ipx/_/https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2124490/ss_1fdda21610fa23d0ce20b5c44fab8aebd509c5cb.1920x1080.jpg%3Ft=1728470029 1x, /_ipx/_/https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2124490/ss_1fdda21610fa23d0ce20b5c44fab8aebd509c5cb.1920x1080.jpg%3Ft=1728470029 2x" no-ssr src="/_ipx/_/https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2124490/ss_1fdda21610fa23d0ce20b5c44fab8aebd509c5cb.1920x1080.jpg%3Ft=1728470029" class="screenshot-viewer_image" data-v-c286209e data-v-2836fdb5-s><!--]--><!----></div>
